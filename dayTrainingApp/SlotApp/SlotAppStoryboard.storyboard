@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slot App View Controller-->
+        <scene sceneID="yCu-4S-kTh">
+            <objects>
+                <viewController storyboardIdentifier="SlotAppViewController" id="uzX-hF-Bhr" customClass="SlotAppViewController" customModule="dayTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2u9-vt-wKL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building_casino" translatesAutoresizingMaskIntoConstraints="NO" id="Y80-Kx-nQ4">
+                                <rect key="frame" x="0.0" y="486.5" width="414" height="409.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot_777" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-74-fQb">
+                                <rect key="frame" x="0.0" y="379.5" width="136.5" height="137"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hqN-qs-J5u" appends="YES" id="azG-af-fpG"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot_777" translatesAutoresizingMaskIntoConstraints="NO" id="5uj-m8-i7P">
+                                <rect key="frame" x="138.5" y="379.5" width="137" height="137"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5uj-m8-i7P" secondAttribute="height" multiplier="1:1" id="ywQ-2V-fn0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Pnf-T8-aRI" appends="YES" id="cY6-qS-IVd"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot_777" translatesAutoresizingMaskIntoConstraints="NO" id="uCy-UY-kVh">
+                                <rect key="frame" x="277.5" y="379.5" width="136.5" height="137"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xsh-Hw-mj3" appends="YES" id="BC2-9y-fsw"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-3W-CEr">
+                                <rect key="frame" x="106.5" y="124" width="201" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="スタート"/>
+                                <connections>
+                                    <action selector="tapStartButton:" destination="uzX-hF-Bhr" eventType="touchUpInside" id="Leh-sT-KrM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画像をタッチしてね" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-gT-op3">
+                                <rect key="frame" x="129" y="236" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-7f-NYZ">
+                                <rect key="frame" x="68" y="616.5" width="278" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <state key="normal" title="もう一回"/>
+                                <connections>
+                                    <action selector="tapOneMoreButton:" destination="uzX-hF-Bhr" eventType="touchUpInside" id="hQL-Ev-EGc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5uj-m8-i7P" firstAttribute="width" secondItem="2u9-vt-wKL" secondAttribute="width" multiplier="0.33" id="49p-Vk-gBb"/>
+                            <constraint firstItem="e2L-74-fQb" firstAttribute="leading" secondItem="KeF-TJ-jsg" secondAttribute="leading" id="5Dy-IJ-MlX"/>
+                            <constraint firstItem="uCy-UY-kVh" firstAttribute="width" secondItem="5uj-m8-i7P" secondAttribute="width" id="III-Wu-sJc"/>
+                            <constraint firstItem="Zmu-3W-CEr" firstAttribute="centerX" secondItem="2u9-vt-wKL" secondAttribute="centerX" id="O2t-Fe-rvh"/>
+                            <constraint firstItem="O5n-7f-NYZ" firstAttribute="centerX" secondItem="5uj-m8-i7P" secondAttribute="centerX" id="V8y-Qw-Rcr"/>
+                            <constraint firstItem="e2L-74-fQb" firstAttribute="height" secondItem="5uj-m8-i7P" secondAttribute="height" id="Y2F-qY-l0V"/>
+                            <constraint firstItem="KeF-TJ-jsg" firstAttribute="trailing" secondItem="uCy-UY-kVh" secondAttribute="trailing" id="Yye-Js-TYH"/>
+                            <constraint firstItem="Y80-Kx-nQ4" firstAttribute="trailing" secondItem="KeF-TJ-jsg" secondAttribute="trailing" id="ZED-xX-VPy"/>
+                            <constraint firstItem="uCy-UY-kVh" firstAttribute="top" secondItem="5uj-m8-i7P" secondAttribute="top" id="Zfi-oz-XeB"/>
+                            <constraint firstItem="k6a-gT-op3" firstAttribute="top" secondItem="Zmu-3W-CEr" secondAttribute="bottom" constant="40" id="bt3-Uc-pJg"/>
+                            <constraint firstItem="5uj-m8-i7P" firstAttribute="centerY" secondItem="2u9-vt-wKL" secondAttribute="centerY" id="c40-Hh-If3"/>
+                            <constraint firstItem="k6a-gT-op3" firstAttribute="centerX" secondItem="Zmu-3W-CEr" secondAttribute="centerX" id="cEF-1H-Edc"/>
+                            <constraint firstItem="O5n-7f-NYZ" firstAttribute="top" secondItem="5uj-m8-i7P" secondAttribute="bottom" constant="100" id="jFs-FZ-Kpe"/>
+                            <constraint firstItem="Y80-Kx-nQ4" firstAttribute="leading" secondItem="KeF-TJ-jsg" secondAttribute="leading" id="ks2-O5-2tc"/>
+                            <constraint firstItem="e2L-74-fQb" firstAttribute="width" secondItem="5uj-m8-i7P" secondAttribute="width" id="lln-cV-Rku"/>
+                            <constraint firstItem="5uj-m8-i7P" firstAttribute="centerX" secondItem="2u9-vt-wKL" secondAttribute="centerX" id="qFk-0g-Ma6"/>
+                            <constraint firstItem="e2L-74-fQb" firstAttribute="top" secondItem="5uj-m8-i7P" secondAttribute="top" id="rGg-TN-zWy"/>
+                            <constraint firstItem="Y80-Kx-nQ4" firstAttribute="top" secondItem="5uj-m8-i7P" secondAttribute="bottom" constant="-30" id="s4U-eJ-y6c"/>
+                            <constraint firstAttribute="bottom" secondItem="Y80-Kx-nQ4" secondAttribute="bottom" id="uTI-4s-JKf"/>
+                            <constraint firstItem="uCy-UY-kVh" firstAttribute="height" secondItem="5uj-m8-i7P" secondAttribute="height" id="yH2-NA-YoI"/>
+                            <constraint firstItem="Zmu-3W-CEr" firstAttribute="top" secondItem="KeF-TJ-jsg" secondAttribute="top" constant="80" id="ywZ-16-xje"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KeF-TJ-jsg"/>
+                    </view>
+                    <connections>
+                        <outlet property="descText" destination="k6a-gT-op3" id="Agi-5N-xny"/>
+                        <outlet property="firstImage" destination="e2L-74-fQb" id="SC0-Nz-v5t"/>
+                        <outlet property="oneMoreButton" destination="O5n-7f-NYZ" id="WcX-zJ-baF"/>
+                        <outlet property="secondImage" destination="5uj-m8-i7P" id="hkV-3k-Vnk"/>
+                        <outlet property="startButton" destination="Zmu-3W-CEr" id="wAh-AG-EqQ"/>
+                        <outlet property="thirdImage" destination="uCy-UY-kVh" id="9Iz-u4-7A1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfv-ZB-lDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hqN-qs-J5u" userLabel="firstImageTap">
+                    <connections>
+                        <action selector="tapFirstImage:" destination="uzX-hF-Bhr" id="4uD-ny-N6e"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Pnf-T8-aRI" userLabel="secondImageTap">
+                    <connections>
+                        <action selector="tapSecondImage:" destination="uzX-hF-Bhr" id="501-Qb-Wcb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Xsh-Hw-mj3" userLabel="thirdImageTap">
+                    <connections>
+                        <action selector="tapThirdImage:" destination="uzX-hF-Bhr" id="uBe-fV-tt8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="139.95535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="building_casino" width="400" height="398"/>
+        <image name="slot_777" width="158" height="184"/>
+    </resources>
+</document>

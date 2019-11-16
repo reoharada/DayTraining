@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UeF-sr-db9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chase App View Controller-->
+        <scene sceneID="yZ1-cc-NdU">
+            <objects>
+                <viewController storyboardIdentifier="ChaseAppViewController" id="UeF-sr-db9" customClass="ChaseAppViewController" customModule="dayTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZA4-GR-7lQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_uchu_space" translatesAutoresizingMaskIntoConstraints="NO" id="6dv-z2-3fX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal" translatesAutoresizingMaskIntoConstraints="NO" id="z1r-6S-iUg">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2x0-9h-7ze"/>
+                                    <constraint firstAttribute="height" constant="100" id="ppS-9o-UIr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xvN-qQ-nCh" appends="YES" id="pum-d9-hI4"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-fZ-bBM">
+                                <rect key="frame" x="46" y="63" width="322" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="スタート"/>
+                                <connections>
+                                    <action selector="tapStartButton:" destination="UeF-sr-db9" eventType="touchUpInside" id="1VP-Jj-rNP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="つかまってしまった" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOg-V4-bak">
+                                <rect key="frame" x="30" y="201" width="354" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vj-Qb-HUv">
+                                <rect key="frame" x="94.5" y="290" width="225" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <state key="normal" title="もう一回"/>
+                                <connections>
+                                    <action selector="tapOneMoreButton:" destination="UeF-sr-db9" eventType="touchUpInside" id="X9d-qe-9xL"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="multiply.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Ir-AA-ASK">
+                                <rect key="frame" x="356" y="25" width="50" height="47.5"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Un1-YQ-OsY"/>
+                                    <constraint firstAttribute="height" constant="50" id="vYT-uv-qnS"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oLK-0D-bod" appends="YES" id="hoP-2L-LD5"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NQE-fZ-bBM" firstAttribute="top" secondItem="cVM-Ra-OJg" secondAttribute="top" constant="19" id="1pj-b2-Lrj"/>
+                            <constraint firstItem="z1r-6S-iUg" firstAttribute="centerY" secondItem="ZA4-GR-7lQ" secondAttribute="centerY" id="7Xc-ae-Vi9"/>
+                            <constraint firstItem="4Ir-AA-ASK" firstAttribute="top" secondItem="ZA4-GR-7lQ" secondAttribute="top" constant="24" id="8cB-Gp-z9q"/>
+                            <constraint firstItem="6dv-z2-3fX" firstAttribute="trailing" secondItem="cVM-Ra-OJg" secondAttribute="trailing" id="DNc-WS-cMF"/>
+                            <constraint firstItem="uOg-V4-bak" firstAttribute="top" secondItem="NQE-fZ-bBM" secondAttribute="bottom" constant="30" id="JOG-vt-50C"/>
+                            <constraint firstItem="NQE-fZ-bBM" firstAttribute="centerX" secondItem="ZA4-GR-7lQ" secondAttribute="centerX" id="LOF-jx-Fjg"/>
+                            <constraint firstItem="8vj-Qb-HUv" firstAttribute="top" secondItem="uOg-V4-bak" secondAttribute="bottom" constant="42" id="QKU-gV-pTJ"/>
+                            <constraint firstItem="6dv-z2-3fX" firstAttribute="leading" secondItem="cVM-Ra-OJg" secondAttribute="leading" id="Qtk-0R-qHf"/>
+                            <constraint firstItem="6dv-z2-3fX" firstAttribute="top" secondItem="ZA4-GR-7lQ" secondAttribute="top" id="RZ3-JN-AfF"/>
+                            <constraint firstItem="uOg-V4-bak" firstAttribute="centerX" secondItem="NQE-fZ-bBM" secondAttribute="centerX" id="SwT-9Z-uKZ"/>
+                            <constraint firstItem="cVM-Ra-OJg" firstAttribute="trailing" secondItem="4Ir-AA-ASK" secondAttribute="trailing" constant="8" id="i6U-Nc-B33"/>
+                            <constraint firstItem="z1r-6S-iUg" firstAttribute="centerX" secondItem="ZA4-GR-7lQ" secondAttribute="centerX" id="tbU-WT-l7a"/>
+                            <constraint firstAttribute="bottom" secondItem="6dv-z2-3fX" secondAttribute="bottom" id="xV9-Oh-Inh"/>
+                            <constraint firstItem="8vj-Qb-HUv" firstAttribute="centerX" secondItem="uOg-V4-bak" secondAttribute="centerX" id="zFT-Hb-K4h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cVM-Ra-OJg"/>
+                    </view>
+                    <connections>
+                        <outlet property="catchLabel" destination="uOg-V4-bak" id="s6G-8Z-wqz"/>
+                        <outlet property="chaseImage" destination="z1r-6S-iUg" id="nzI-G9-7Cc"/>
+                        <outlet property="oneMoreButton" destination="8vj-Qb-HUv" id="AoH-3J-Epm"/>
+                        <outlet property="startButton" destination="NQE-fZ-bBM" id="yKc-ha-Vj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVK-OI-G4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xvN-qQ-nCh" userLabel="dogTap">
+                    <connections>
+                        <action selector="tapImageView:" destination="UeF-sr-db9" id="7IC-Vr-Fo4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oLK-0D-bod" userLabel="closeWindow">
+                    <connections>
+                        <action selector="tapCloseWindow:" destination="UeF-sr-db9" id="NOd-tJ-h1l"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_uchu_space" width="600" height="338"/>
+        <image name="multiply.square" catalog="system" width="64" height="56"/>
+        <image name="normal" width="300" height="268"/>
+    </resources>
+</document>
